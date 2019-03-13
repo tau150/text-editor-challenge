@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Intro
 
-## Available Scripts
+Imagine that you are involved into development of a data knowledge storing system, like Wiki or Confluence. At some point you need providing users with possibility of advanced text formatting. For this purpose it was decided to build an own component, in order to have possibilities customizing its functionality in the future.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The goal is to implement a component, which renders text and has several features for text manipulation and formatting.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Must have
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. We need to see your own code. It is not permitted to apply and configure a ready-to-use component for text formatting. We need to see your own solution. However you can use other handy components and libraries.
+2. User should be able to interact with words of text by some action like double-click or some other way, to select a word. When the word is selected, the user should have possibility to apply options for this word. For simplification we expect to select separate words only; it is not expected to support selection for a part of text.
+3. Minimal required formatting list is Bold, Italic and Underline.
+4. Formatting settings should be persisted into an in-memory model. When the user selects formatted word, the component should indicate, what formatting options are applied. So then a repetetive formatting application removes these styles (i.e. click bold-botton - get bold text, click bold-botton again - return text weight to normal). It should be possible to apply Bold, Italic and Underline to a word at the same time.
+5. Besides formatting options, the user should be able to see synonyms for any word. For getting synonyms use https://www.datamuse.com/api/. Synonyms loading should be implemented out of the component and provided into the component in some way.
+6. User should be able to replace a word with a synonym, while keeping all formatting settings.
+7. The solution must be flexible and extendable, so new functionality can be added in the future.
+8. Target completion time is 2 hours. We would rather see what you were able to do in 2 hours, than a full-blown solution you’ve spent days implementing. Note that in addition to quality, time used is also factored into scoring the task.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Nice to have
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+1. The editor accepts text input, rather than works with a predefined block of text.
+2. Word formatting should be extended by color setting.
+3. It should be possible to do indentation for a block of text to one or several steps (i.e. tabulation). Take a look to Gmail editor to get the idea.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Expected Deliverables
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Source code.
+2. Readme, with instructions, how to launch your application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tips & Hints
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. We've prepared a skeleton application for your convenience. Please find yours below:
+   - Angular skeleton
+   - React skeleton
+   - Vanilla JavaScript skeleton
+   - Vue.js skeleton
+     Please use the skeleton, to save time. However there is no need to keep our styles. We encourage you to follow styleguid you are used to.
+2. It is okay to change application architecture.
+3. Font doesn't matter. Select a specific one, if you need.
+4. User interface for the text manipulation could be done via popup component, which renders synonyms and has text formatting actions. Also formatting actions could be done via a top panel. It is free to implement any other UI/UX solutions.
